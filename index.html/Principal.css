@@ -1,0 +1,91 @@
+/* Color de Fondo*/
+body{
+    background-color: rgb(2, 6, 39);
+    background-size: cover;
+}
+/* Menu de Navegacion de System Fitness*/
+.logo a{
+    text-decoration: none;
+    color: inherit;
+    transition: .3s;
+}
+.logo a:hover{
+    color: #ff4d4d;
+}
+/*Letras*/
+body{
+    color: white;
+}
+/*Parrafos*/
+p{
+    color: rgb(221, 198, 19);
+}
+/* Barra superior */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 40px;
+    background:#0d0d0d;
+    position:center;
+}
+/* Logo */
+.logo h1{
+    margin:0;
+    color:#8f0505;
+    font-size:35px;
+}
+/* Botón hamburguesa */
+.menu-btn{
+    font-size:40px;
+    cursor:pointer;
+    color:rgb(184, 26, 26);
+}
+/* Menú oculto */
+nav{
+    display:none;
+    position:absolute;
+    top:80px;
+    right:20px;
+    background:#1a1a1a;
+    border-radius:10px;
+    width:220px;
+}
+/* Lista */
+nav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+nav ul li{
+    border-bottom:1px solid #333;
+}
+nav ul li:last-child{
+    border-bottom:none;
+}
+nav ul li a{
+    display:block;
+    padding:15px;
+    color:white;
+    text-decoration:none;
+}
+/* Efecto al pasar mouse */
+nav ul li a:hover{
+    background:#101066;
+    color:black;
+}
+/*Ultima Seccion*/
+footer{
+    flex-direction: column;
+    background-color: #0d0d0d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    display:grid;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+    word-break: break-all;
+}
