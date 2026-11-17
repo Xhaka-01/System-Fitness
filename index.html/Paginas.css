@@ -6,6 +6,46 @@ body{
     box-sizing:border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+.TextoInicio{
+    text-align:center;
+    margin-top:20px;
+}
+.TextoInicio1 h1{
+    font-size: clamp(1.8rem, 5vw, 4.375rem);
+    color:#0e3e9d;
+    text-shadow: 2px 2px 4px #000000;
+}
+.TextoInicio1 h2{
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
+    font-size: clamp(1rem, 2vw, 3rem);
+    color:#37020a;
+    text-shadow: 2px 2px 4px #000000;
+}
+.TextoInicio1 h3{
+    font-size: clamp(1.4rem, 3vw, 2.5rem);
+    color:#d4af37;
+    text-shadow: 2px 2px 4px #000000;
+}
+.TextoInicio1 h4{
+    font-size: clamp(1.1rem, 2.5vw, 1.875rem);
+    color:#792626;
+    text-shadow: 2px 2px 4px #000000;
+}
+.TextoInicio1 h5{
+    font-size: clamp(1.1rem, 2.5vw, 1.875rem);
+    color:#ff0000;
+    text-shadow: 2px 2px 4px #000000;
+}
+.separador {
+    width: 100%;
+    max-width: 100%;
+    height: 4px;
+    background-color: white;
+    box-sizing: border-box;
+    border-top: 2px solid #0d0d0d;
+    border-bottom: 2px solid #0d0d0d;
+}
 @media (max-width: 600px) {
     .INICIOGYM {
         flex-direction: column;
@@ -61,35 +101,6 @@ body{
     cursor: pointer;
 }
 /*_________________________________________________________________*/
-.TextoInicio{
-    text-align:center;
-    margin-top:20px;
-}
-.TextoInicio1 h1{
-    font-size:70px;
-    color:#0e3e9d;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h2{
-    font-size:50px;
-    color:#37020a;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h3{
-    font-size:40px;
-    color:#d4af37;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h4{
-    font-size:30px;
-    color:#792626;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h5{
-    font-size:30px;
-    color:#ff0000;
-    text-shadow: 2px 2px 4px #000000;
-}
 .TextoInicio1 img{
     max-width:80%;
     height:auto;
@@ -123,13 +134,22 @@ body{
     cursor:pointer;
 }
 /*_________________________________________________________________*/
-.table1{
+.TableContain{
+    overflow-x:auto;
     margin-bottom:60px;
     margin: 0 auto;
     border-collapse: collapse;
+    margin: 0 auto 40px auto;
     max-width: 100%;
     height: auto;
+    border: 3px solid black;
+}
+.table1{
+    margin: 0 auto;
+    border-collapse: collapse;
     margin: 0 auto 40px auto;
+    max-width: 100%;
+    height: auto;
     border: 3px solid black;
 }
 .table1 th,
@@ -138,8 +158,10 @@ body{
     color:white;
     border:3px solid black;
     padding:15px;
-    text-align:center;
-    vertical-align:middle;
+    vertical-align:top;
+    max-width: 100%;
+    height: auto;
+
 }
 .table2{
     margin: 0 auto;
@@ -156,11 +178,22 @@ body{
     border:3px solid black;
     padding:15px;
     vertical-align:top;
+    max-width: 100%;
+    height: auto;
 }
 /* ================= Contactos ================= */
 
 
 /* ================= Instalaciones ================= */
+.INSTALACION2{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    max-width: 100%;
+    height: auto;
+    object-fit:contain;
+    object-fit:cover;
+}
 .INSTALACION{
     display:flex;
     justify-content:center;
@@ -208,66 +241,59 @@ body{
     cursor:pointer;
 }
 /* ================= Tienda ================= */
-.Tienda{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-}
-.Tienda1{
-    margin-top: 10px;
-    flex-direction: column;
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-}
-.Tienda1 img{
-    max-width:100%;
-    height: auto;
-    aspect-ratio: 1/1;
-    object-fit:fill;   
-    border-radius:20px;
-    transition:.3s;
-    cursor:pointer;
-}
-.Marcas{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-}
-.Marca1{
-    margin-top: 10px;
-    flex-direction: column;
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-}
-.Marca1 img{
-    max-width:100%;
-    height:auto;
-    aspect-ratio: 1/1;
-    object-fit:fill;   
-    border-radius:20px;
-    transition:.3s;
-    cursor:pointer;
-}
+    .Tienda {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .Tienda1 {
+        min-width: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+    .Tienda1 img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        box-sizing: border-box;
+    }
+
+.Marcas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px 12px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+.Marca1 {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+}
 
+    .Marca1 img {
+        gap: 35px 12px;
+        max-width: 100%;
+        align-items: center;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 /* ================= TABLET ================= */
 @media (min-width: 601px) and (max-width: 999px) {
     /* IMAGENES PRINCIPALES */
@@ -338,35 +364,6 @@ body{
         border-radius: 30px;
     }
     /*_________________________________________________________________*/
-.TextoInicio{
-    text-align:center;
-    margin-top:20px;
-}
-.TextoInicio1 h1{
-    font-size:70px;
-    color:#0e3e9d;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h2{
-    font-size:50px;
-    color:#37020a;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h3{
-    font-size:40px;
-    color:#d4af37;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h4{
-    font-size:30px;
-    color:#792626;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h5{
-    font-size:30px;
-    color:#ff0000;
-    text-shadow: 2px 2px 4px #000000;
-}
 .TextoInicio1 img{
     max-width:80%;
     height:auto;
@@ -400,12 +397,21 @@ body{
     cursor:pointer;
 }
 /*_________________________________________________________________*/
+.TableContain{
+    overflow-x:auto;
+    margin-bottom:60px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin: 0 auto 40px auto;
+    max-width: 100%;
+    height: auto;
+    border: 3px solid black;
+}
 .table1{
     margin-bottom:60px;
     margin: 0 auto;
     border-collapse: collapse;
-    width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     height: auto;
     margin: 0 auto 40px auto;
     border: 3px solid black;
@@ -423,8 +429,7 @@ body{
     margin: 0 auto;
     border-collapse: collapse;
     margin: 0 auto 40px auto;
-    width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     height: auto;
     border: 3px solid black;
 }
@@ -610,35 +615,6 @@ body{
         border-radius: 30px;
     }
 /*_________________________________________________________________*/
-.TextoInicio{
-    text-align:center;
-    margin-top:20px;
-}
-.TextoInicio1 h1{
-    font-size:70px;
-    color:#0e3e9d;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h2{
-    font-size:50px;
-    color:#37020a;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h3{
-    font-size:40px;
-    color:#d4af37;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h4{
-    font-size:30px;
-    color:#792626;
-    text-shadow: 2px 2px 4px #000000;
-}
-.TextoInicio1 h5{
-    font-size:30px;
-    color:#ff0000;
-    text-shadow: 2px 2px 4px #000000;
-}
 .TextoInicio1 img{
     max-width:80%;
     height:auto;
@@ -676,8 +652,7 @@ body{
     margin-bottom:60px;
     margin: 0 auto;
     border-collapse: collapse;
-    width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     height: auto;
     margin: 0 auto 40px auto;
     border: 3px solid black;
@@ -695,8 +670,7 @@ body{
     margin: 0 auto;
     border-collapse: collapse;
     margin: 0 auto 40px auto;
-    width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     height: auto;
     border: 3px solid black;
 }
@@ -716,6 +690,8 @@ body{
     display:flex;
     justify-content:center;
     gap:40px;
+    max-width: 100%;
+    height: auto;
 }
 .INSTALACION1{
     margin-top: 10px;
@@ -726,7 +702,7 @@ body{
 }
 .INSTALACION1 img{
     max-width:100%;
-    height: 450px;
+    height: auto;
     object-fit:fill;   
     border-radius:20px;
     transition:.3s;
